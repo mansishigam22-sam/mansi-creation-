@@ -1,1 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom & Frame | Aesthetic Custom Gifts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght=300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FDFBF7',
+                        beige: '#F5EFE6',
+                        blush: '#E8D5C8',
+                        dustyRose: '#D1B4A1',
+                        charcoal: '#3E3431',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #FDFBF7; color: #3E3431; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .fade-in { transition: opacity 0.5s ease-in-out; }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <div class="bg-blush text-charcoal text-xs tracking-widest text-center py-2 px-4 font-medium uppercase">
+        ✨ Free shipping on orders over ₹999 | Handcrafted with Love
+    </div>
+
+    <nav class="sticky top-0 z-50 bg-cream/90 backdrop-blur-md border-b border-beige px-6 py-4 md:px-12 flex justify-between items-center">
+        <div class="flex items-center gap-5">
+            <a href="index.html">
+                <img src="m.creation logo.png" alt="Mansi Creation Logo" style="height: 80px;">
+            </a>
+            <div class="flex flex-col">
+                <a href="#" class="font-serif text-2xl font-bold tracking-wide text-charcoal">MANSI CREATION</a>
+                <a href="#" class="font-serif text-xs italic tracking-wide text-dustyRose">Bloom & Frame | Aesthetic Custom Gifts</a>
+            </div>
+        </div>
+        
+        <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide uppercase text-charcoal/80">
+            <a href="#" class="hover:text-dustyRose transition">Home</a>
+            <a href="#shop" class="hover:text-dustyRose transition">Shop</a>
+            <a href="#about" class="hover:text-dustyRose transition">Our Story</a>
+            <a href="#contact" class="hover:text-dustyRose transition">Contact</a>
+        </div>
+
+        <div class="flex items-center space-x-6 text-xl">
+            <button onclick="toggleCart()" class="relative p-1 hover:text-dustyRose transition">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cart-count" class="absolute -top-1 -right-1 bg-dustyRose text-white text-xs w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+            </button>
+            <button class="md:hidden" onclick="toggleMobileMenu()"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-cream flex flex-col justify-center items-center space-y-8 text-xl font-medium tracking-wider uppercase">
+        <button onclick="toggleMobileMenu()" class="absolute top-6 right-6 text-2xl"><i class="fa-solid fa-xmark"></i></button>
+        <a href="#" onclick="toggleMobileMenu()" class="hover:text-dustyRose">Home</a>
+        <a href="#shop" onclick="toggleMobileMenu()" class="hover:text-dustyRose">Shop</a>
+        <a href="#about" onclick="toggleMobileMenu()" class="hover:text-dustyRose">Our Story</a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-dustyRose">Contact</a>
+    </div>
+
+    <section class="relative bg-beige min-h-[75vh] flex items-center px-6 md:px-16 py-12 overflow-hidden">
+        <div class="max-w-xl z-10 space-y-6">
+            <span class="text-xs font-semibold tracking-widest uppercase text-dustyRose">Handcrafted Elegance</span>
+            <h1 class="font-serif text-4xl md:text-6xl text-charcoal leading-tight">Preserving moments, blooming smiles.</h1>
+            <p class="text-charcoal/70 leading-relaxed text-sm md:text-base">Explore our thoughtfully curated collection of premium custom photo frames and ethereal, fresh bouquets designed to bring warmth to your favorite spaces.</p>
+            <div class="pt-4">
+                <a href="#shop" class="bg-charcoal text-cream hover:bg-dustyRose px-8 py-3 rounded-none text-sm uppercase tracking-widest transition duration-300 inline-block shadow-sm">Explore Collections</a>
+            </div>
+        </div>
+        <div class="absolute right-0 bottom-0 top-0 w-1/2 hidden md:block bg-cover bg-center opacity-80" style="background-image: url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=1200&auto=format&fit=crop');"></div>
+    </section>
+
+    <section id="shop" class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+        <div class="text-center max-w-lg mx-auto mb-16">
+            <h2 class="font-serif text-3xl md:text-4xl text-charcoal mb-4">Our Curated Collections</h2>
+            <div class="h-[1px] w-20 bg-dustyRose mx-auto mb-4"></div>
+            <p class="text-charcoal/60 text-sm">Filter by main category and find the perfect piece crafted uniquely for your special occasion.</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button onclick="filterCategory('all', event)" class="cat-btn bg-charcoal text-cream px-6 py-2 border border-charcoal text-xs tracking-widest uppercase transition">All</button>
+            <button onclick="filterCategory('frames', event)" class="cat-btn px-6 py-2 border border-beige text-xs tracking-widest uppercase hover:border-charcoal transition">Photo Frames</button>
+            <button onclick="filterCategory('bouquets', event)" class="cat-btn px-6 py-2 border border-beige text-xs tracking-widest uppercase hover:border-charcoal transition">Bouquets</button>
+            <button onclick="filterCategory('magazines', event)" class="cat-btn px-6 py-2 border border-beige text-xs tracking-widest uppercase hover:border-charcoal transition">Magazines</button>
+            <button onclick="filterCategory('handcrafted', event)" class="cat-btn px-6 py-2 border border-beige text-xs tracking-widest uppercase hover:border-charcoal transition">Handcrafted</button>
+            <button onclick="filterCategory('cards', event)" class="cat-btn px-6 py-2 border border-beige text-xs tracking-widest uppercase hover:border-charcoal transition">Cards</button>
+        </div>
+
+        <div class="flex justify-center gap-6 mb-8 text-xs text-charcoal/60 font-medium tracking-wide">
+            <span>✨ Sub-collections: Personalized, Minimalist, Seasonal Fresh, Dried Botanicals</span>
+        </div>
+
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+    </section>
+
+    <section id="about" class="bg-beige/50 py-20 px-6">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="h-[400px] bg-cover bg-center shadow-lg" style="background-image: url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80');"></div>
+            <div class="space-y-6">
+                <span class="text-xs font-semibold tracking-widest uppercase text-dustyRose">Our Story</span>
+                <h2 class="font-serif text-3xl text-charcoal">Made with care, delivered with warmth.</h2>
+                <p class="text-charcoal/70 text-sm leading-relaxed">At Bloom & Frame, we believe that every memory deserves a beautiful border, and every sentiment is best expressed through nature's finest colors. Our pieces are locally sourced, sustainably packaged, and curated delicately to bring comfort and premium design directly to your doorstep.</p>
+                <div class="border-l-2 border-dustyRose pl-4 italic text-charcoal/80 text-sm">
+                    "Artistry is not just what we make, but how we make you feel."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 max-w-5xl mx-auto px-6 text-center">
+        <h2 class="font-serif text-3xl text-charcoal mb-12">Shared Moments</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-cream p-8 border border-beige space-y-4">
+                <div class="text-dustyRose text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-sm italic text-charcoal/80">"The Walnut Gallery frame felt so premium. It completely transformed my wedding portrait. Highly recommend!"</p>
+                <p class="text-xs tracking-wider uppercase font-semibold text-charcoal/60">— Eleanor R.</p>
+            </div>
+            <div class="bg-cream p-8 border border-beige space-y-4">
+                <div class="text-dustyRose text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-sm italic text-charcoal/80">"Stunning arrangement! The blush pastel bouquet smelled amazing and lasted well over a week. Perfect gift."</p>
+                <p class="text-xs tracking-wider uppercase font-semibold text-charcoal/60">— Clara M.</p>
+            </div>
+            <div class="bg-cream p-8 border border-beige space-y-4">
+                <div class="text-dustyRose text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-sm italic text-charcoal/80">"Customer service via WhatsApp was so responsive. They customized my frame size flawlessly."</p>
+                <p class="text-xs tracking-wider uppercase font-semibold text-charcoal/60">— Liam T.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-charcoal text-cream py-16 px-6 text-center">
+        <div class="max-w-xl mx-auto space-y-6">
+            <h2 class="font-serif text-3xl">Have a custom request?</h2>
+            <p class="text-cream/70 text-sm leading-relaxed">Whether you need specific dimensions for an art frame or a bespoke floral arrangement for an event, we’re happy to chat via WhatsApp for instant personalization.</p>
+            <div class="pt-4">
+                <a href="https://wa.me/917028755897" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 inline-flex items-center space-x-3 transition text-sm font-semibold tracking-wider uppercase">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Chat on WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-full sm:w-96 bg-cream shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="p-6 border-b border-beige flex justify-between items-center">
+            <h3 class="font-serif text-xl text-charcoal">Your Shopping Bag</h3>
+            <button onclick="toggleCart()" class="text-xl hover:text-dustyRose"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4">
+            <p class="text-sm text-charcoal/50 text-center py-8">Your cart is empty.</p>
+        </div>
+
+        <div class="p-6 border-t border-beige bg-beige/30 space-y-4">
+            <div class="flex justify-between font-serif text-lg text-charcoal">
+                <span>Total:</span>
+                <span id="cart-total">₹0.00</span>
+            </div>
+
+            <div class="space-y-2">
+                <label class="text-xs uppercase font-medium tracking-wider text-charcoal/60 block">Select Payment Mode</label>
+                <select id="payment-method" class="w-full bg-cream border border-blush text-xs p-2 focus:outline-none focus:border-charcoal">
+                    <option value="Online">Online (UPI, Cards, NetBanking, Wallets)</option>
+                    <option value="COD">Cash on Delivery (COD)</option>
+                    <option value="Bank">Direct Bank Transfer</option>
+                </select>
+            </div>
+
+            <button onclick="checkoutOrder()" class="w-full bg-charcoal text-cream py-3 text-xs uppercase tracking-widest hover:bg-dustyRose transition">
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <div id="product-modal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+        <div class="bg-white max-w-4xl w-[90%] p-6 rounded-lg relative">
+            <button onclick="closeProduct()" class="absolute top-4 right-4 text-2xl text-gray-500 hover:text-black">×</button>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="relative">
+                    <img id="modal-img" class="w-full h-[400px] object-cover rounded shadow-inner" src="" alt="">
+                </div>
+                <div class="flex flex-col justify-between">
+                    <div>
+                        <h2 id="modal-name" class="font-serif text-3xl mb-1 text-charcoal"></h2>
+                        <div class="flex items-center gap-1 text-amber-500 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-charcoal/50 ml-1">(4.9 rating)</span>
+                        </div>
+                        <p id="modal-price" class="text-2xl font-bold mb-4 text-charcoal"></p>
+                        <div class="h-[1px] w-full bg-beige mb-4"></div>
+                        <p class="text-xs uppercase font-semibold text-dustyRose tracking-wider mb-1">About Product</p>
+                        <p id="modal-about" class="text-gray-600 leading-relaxed text-sm"></p>
+                    </div>
+                    
+                    <div class="mt-6 space-y-2">
+                        <div class="flex gap-2">
+                            <button id="modal-cart-btn" class="w-1/2 border border-charcoal text-charcoal hover:bg-beige py-3 uppercase tracking-widest text-xs font-semibold transition">
+                                <i class="fa-solid fa-bag-shopping mr-2"></i>Add To Bag
+                            </button>
+                            <button id="modal-buy-btn" class="w-1/2 bg-charcoal text-cream hover:bg-dustyRose py-3 uppercase tracking-widest text-xs font-semibold transition">
+                                Buy Now
+                            </button>
+                        </div>
+                        <a id="modal-whatsapp-btn" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 uppercase tracking-widest text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Order via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-cream border-t border-beige py-8 text-center text-xs text-charcoal/60 tracking-wider">
+        <p>&copy; 2026 Bloom & Frame. Designed beautifully for your cherished moments.</p>
+    </footer>   
+
+   <script>
+        // १. तुमची Public Key इनिशियलाइज केली आहे
+        emailjs.init("qK9y044BFxQFhpx56");
+
+        // Mock Product Data
+        const products = [
+        
+    { id: 1, name: "Royal Red Rose Bouquet", price: 699, category: "bouquets", sub: "Bouquet", img: "bouquet1.jpg", about: "A luxurious handcrafted red rose bouquet perfect for birthdays, anniversaries, and special celebrations. Wrapped in premium paper and designed elegantly." },
+    { id: 2, name: "Classic Walnut Frame", price: 500, category: "frames", sub: "Photo Frames", img: "frame1.jpeg", about: "Premium quality walnut wood frame designed to keep your special family or wedding memories preserved with an elegant minimalist look." },
+    { id: 3, name: "Happy Birthday Magazine", price: 599, category: "magazines", sub: "Magazines", img: "magzine1.jpg", about: "Celebrate your loved one's special day with our personalized Happy Birthday Magazine, featuring their name and photo on the cover, filled with heartfelt messages inside." },
+    { id: 4, name: "Personalized Greeting Card", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card.jpg", about: "A beautifully handcrafted greeting card that can be personalized with your own message and design, perfect for any occasion to show your love." },
+    { id: 5, name: "Butterfly Aesthetic Card", price: 799, category: "cards", sub: "Cards", img: "cards1.jpg", about: "A unique and elegant butterfly-themed greeting card that stands out, crafted with premium materials and designed to leave a lasting impression." },
+    { id: 6, name: "Pink Elegance Bouquet", price: 799, category: "bouquets", sub: "Bouquet", img: "bouquet2.jpg", about: "A beautifully crafted pink rose bouquet, perfect for expressing love, grace, and affection on special occasions." },
+    { id: 7, name: "Premium Walnut Frame", price: 450, category: "frames", sub: "Photo Frames", img: "frame2.jpeg", about: "High-quality walnut wood frame designed to showcase your cherished couple or wedding photographs with a warm finish." },
+    { id: 8, name: "Anniversary Special Magazine", price: 649, category: "magazines", sub: "Magazines", img: "magzine2.jpg", about: "Celebrate your beautiful journey with our customized anniversary magazine, featuring your best photos on a premium glossy cover." },
+    { id: 9, name: "Handmade Love Card", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card2.jpg", about: "A personalized heartfelt card made carefully by hand, offering a lovely way to share warm messages with someone special." },
+    { id: 10, name: "Floral Welcome Invitation", price: 899, category: "cards", sub: "Cards", img: "cards2.jpg", about: "An elegant floral-themed card featuring aesthetic designs, perfectly crafted for weddings, events, or premium greeting purposes." },
+    { id: 11, name: "Seasonal Fresh Bouquet", price: 899, category: "bouquets", sub: "Bouquet", img: "bouquet3.jpg", about: "A vibrant arrangement featuring the season's finest fresh flowers, beautifully bundled to bring joy and natural color to any room." },
+    { id: 12, name: "Elegant Minimalist Frame", price: 550, category: "frames", sub: "Photo Frames", img: "frame3.jpeg", about: "An elegant walnut wood frame designed to preserve your favorite memories with a timeless and sophisticated border." },
+    { id: 13, name: "Graduation Memory Magazine", price: 699, category: "magazines", sub: "Magazines", img: "magzine3.jpg", about: "Commemorate academic success and precious college memories with this personalized graduation style premium magazine." },
+    { id: 14, name: "Customized Keepsake Card", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card3.jpg", about: "Express your truest feelings with this customizable aesthetic card, beautifully styled for milestones and birthdays." },
+    { id: 15, name: "Minimalist Pastel Greeting", price: 699, category: "cards", sub: "Cards", img: "cards3.jpg", about: "A sleek and minimalist design card featuring clean layout details, perfect for modern aesthetic gifting." },
+    { id: 16, name: "Midnight Chocolate Bouquet", price: 1499, category: "bouquets", sub: "Bouquet", img: "bouquet4.jpg", about: "A decadent luxury bouquet featuring a wonderful mix of gourmet chocolates and artistic wraps, perfect for the ultimate surprise." },
+    { id: 17, name: "Rustic Desktop Wood Frame", price: 600, category: "frames", sub: "Photo Frames", img: "frame 4.jpeg", about: "A rustic walnut wood frame designed to give your cherished moments a cozy, warm, and delightfully natural look." },
+    { id: 18, name: "Vogue Birthday Edition Magazine", price: 649, category: "magazines", sub: "Magazines", img: "magzine4.jpg", about: "Make them feel like a cover model with this premium customized birthday magazine packed with your favorite shared photos." },
+    { id: 19, name: "Elegant Handcrafted Wish Card", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card4.jpg", about: "Carefully handcrafted with fine materials, this card adds a personal touch to your blessings, congratulations, and wishes." },
+    { id: 20, name: "Geometric Abstract Card", price: 799, category: "cards", sub: "Cards", img: "cards4.jpg", about: "A modern card featuring geometric themes and premium textures, designed beautifully to convey your messages uniquely." },
+    { id: 21, name: "Celebration Treat Candy Bouquet", price: 950, category: "bouquets", sub: "Bouquet", img: "bouquet5.jpg", about: "A delightful combination of decorative elements and premium sweet treats, ideal for grand milestones or celebrations." },
+    { id: 22, name: "Wedding Anniversary Gallery Frame", price: 550, category: "frames", sub: "Photo Frames", img: "Anniversary Frame.jpg", about: "A premium walnut frame specifically designed to capture the beauty of your marriage anniversary and wedding vows." }, // दुरुस्त केलेला भाग
+    { id: 23, name: "Memories Milestone Magazine", price: 699, category: "magazines", sub: "Magazines", img: "magzine5.jpg", about: "Document your life's grandest achievements inside a beautifully formatted customized keepsake magazine." },
+    { id: 24, name: "Floral Heart Handcrafted Card", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card5.jpg", about: "Featuring delicate floral patterns, this handmade card is a sweet and gentle way to say thank you or show appreciation." },
+    { id: 25, name: "Blush Pink Minimalist Card", price: 699, category: "cards", sub: "Cards", img: "cards5.jpg", about: "A soft, pastel-colored card with a clean layout, designed flawlessly for minimalists who appreciate clean art style." },
+    { id: 26, name: "Scarlet Love Romance Bouquet", price: 850, category: "bouquets", sub: "Bouquet", img: "bouquet6.jpg", about: "An intense and romantic bouquet featuring rich scarlet themes and beautiful wraps, designed to make hearts melt." },
+    { id: 27, name: "Vintage Couple Collage Frame", price: 650, category: "frames", sub: "Photo Frames", img: "Married Couple.jpg", about: "A vintage-inspired walnut wood frame curated to beautifully display romantic portraits of couples with timeless grace." },
+    { id: 28, name: "Forever Together Magazine", price: 649, category: "magazines", sub: "Magazines", img: "magzine6.jpg", about: "Your very own love story published on a gorgeous custom magazine cover, complete with beautiful internal picture grids." },
+    { id: 29, name: "Aesthetic Border Greeting Card", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card6.jpg", about: "A clean, border-designed handmade card that elegantly frames your personalized notes and warm holiday wishes." },
+    { id: 30, name: "Botanical Floral Invitation", price: 899, category: "cards", sub: "Cards", img: "cards6.jpg", about: "Dressed in detailed artistic flora, this card serves as a luxurious invite or premium announcement piece for special events." },
+    { id: 31, name: "Chocolate & Sweet Memories Bouquet", price: 699, category: "bouquets", sub: "Bouquet", img: "bouquet7.jpg", about: "A wonderful gift featuring chocolate layers curated alongside nostalgic elements, making it an incredible birthday surprise." },
+    { id: 32, name: "Modern Contemporary Walnut Frame", price: 550, category: "frames", sub: "Photo Frames", img: "frame5.jpg", about: "A contemporary sleek walnut wood frame crafted perfectly to add an artistic look to your living room walls or office desk." },
+    { id: 33, name: "Luxury Cover Star Magazine", price: 649, category: "magazines", sub: "Magazines", img: "magzine7.jpg", about: "Surprise your best friends or family with a customized magazine cover that turns their best photographs into high-fashion art." },
+    { id: 34, name: "Handmade Celebration Greeting Card", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card7.jpg", about: "A wonderful handcrafted card made with high-texture paper sheets, tailored perfectly for custom signatures and messages." },
+    { id: 35, name: "Art Deco Geometric Card", price: 799, category: "cards", sub: "Cards", img: "cards7.jpg", about: "An artfully designed abstract card featuring clean geometric prints, ideal for sending premium contemporary greetings." },
+    { id: 36, name: "Golden Memories Polaroid Bouquet", price: 499, category: "bouquets", sub: "Bouquet", img: "bouquet8.jpg", about: "A highly creative custom bouquet holding tiny polaroid photos instead of flowers. A truly unique and heartwarming way to gift memories." },
+    { id: 37, name: "Walnut Portrait Frame", price: 550, category: "frames", sub: "Photo Frames", img: "frame7.jpg", about: "A sophisticated dark walnut wood frame built with crisp margins to cleanly emphasize your most beloved portrait photographs." },
+    { id: 38, name: "Our Love Story Couple's Magazine", price: 699, category: "magazines", sub: "Magazines", img: "magazine7.jpg", about: "Celebrate years of togetherness with a highly customized couple's magazine dedicated entirely to your romantic journey." },
+    { id: 39, name: "Aesthetic Kraft Handcrafted Card", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card8.jpg", about: "A beautiful rustic kraft paper style card, hand-detailed carefully to give a nostalgic, vintage touch to your text." },
+    { id: 40, name: "Clean Minimalist Typography Card", price: 699, category: "cards", sub: "Cards", img: "cards8.jpg", about: "A sharp and sleek typography card featuring high-quality print layout, excellent for corporate or high-end greetings." },
+    { id: 41, name: "Pink Elegance Luxury Hamper", price: 499, category: "bouquets", sub: "Bouquet", img: "bouquet9.jpg", about: "A beautifully curated premium pink beauty hamper bouquet, packed elegantly to pamper her on birthdays or special occasions." },
+    { id: 42, name: "Warm Rustic Wooden Frame", price: 600, category: "frames", sub: "Photo Frames", img: "frame6.jpg", about: "A warm-toned rustic walnut photo frame that effortlessly adds comfort, texture, and elegance to any corner of your home." },
+    { id: 43, name: "Retro Style Birthday Magazine", price: 649, category: "magazines", sub: "Magazines", img: "magzine10.jpg", about: "Bring back the classic era with this retro styled birthday custom magazine, featuring creative text grids and photo frames." },
+    { id: 44, name: "Chic Ribbon Handmade Card", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card10.jpg", about: "An elegant handcrafted greeting card detailed with subtle ribbon accents, adding extra luxury to your personalized message." },
+    { id: 45, name: "Royal Wedding Invitation Card", price: 899, category: "cards", sub: "Cards", img: "cards10.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 46, name: "Anniversary Vogue Cover Magazine", price: 649, category: "magazines", sub: "Magazines", img: "magzine8.jpg", about: "Celebrate your anniversary with our personalized magazine, featuring your names and photos on a gorgeous, high-fashion cover." },
+    { id: 47, name: "Premium Handcrafted Birthday Card", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card9.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 48, name: "Floral Classic Invitation Greeting", price: 899, category: "cards", sub: "Cards", img: "cards9.jpg", about: "A gorgeous floral invitation card that stands out, crafted with rich premium elements to leave a lovely lasting impression." },
+    { id: 49, name: "Ruby Glam Luxury Hamper Bouquet", price: 499, category: "bouquets", sub: "Bouquet", img: "bouquet10.jpg", about: "A magnificent hamper bouquet featuring luxury accessories, premium wrapping, and treats, perfect for high-end surprises." },
+    { id: 50, name: "Vintage Heirloom Walnut Frame", price: 650, category: "frames", sub: "Photo Frames", img: "frame9.jpg", about: "A vintage-inspired premium walnut wood frame made meticulously to securely preserve your cherished nostalgic memories." },
+    { id: 51, name: "Royal Invitation Card 11", price: 899, category: "cards", sub: "Cards", img: "cards11.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 52, name: "Royal Invitation Card 12", price: 899, category: "cards", sub: "Cards", img: "cards12.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 53, name: "Royal Invitation Card 13", price: 899, category: "cards", sub: "Cards", img: "cards13.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 54, name: "Royal Invitation Card 14", price: 899, category: "cards", sub: "Cards", img: "cards14.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 55, name: "Royal Invitation Card 15", price: 899, category: "cards", sub: "Cards", img: "cards15.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 56, name: "Royal Invitation Card 16", price: 899, category: "cards", sub: "Cards", img: "cards16.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 57, name: "Royal Invitation Card 17", price: 899, category: "cards", sub: "Cards", img: "cards17.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 58, name: "Royal Invitation Card 18", price: 899, category: "cards", sub: "Cards", img: "cards18.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 59, name: "Royal Invitation Card 19", price: 899, category: "cards", sub: "Cards", img: "cards19.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 60, name: "Royal Invitation Card 20", price: 899, category: "cards", sub: "Cards", img: "cards20.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 61, name: "Royal Invitation Card 21", price: 899, category: "cards", sub: "Cards", img: "cards21.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 62, name: "Royal Invitation Card 22", price: 899, category: "cards", sub: "Cards", img: "cards22.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 63, name: "Royal Invitation Card 23", price: 899, category: "cards", sub: "Cards", img: "cards23.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 64, name: "Royal Invitation Card 24", price: 899, category: "cards", sub: "Cards", img: "cards24.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." }, // ड्युप्लिकेट ID 45 बदलून 64 केला
+    { id: 65, name: "Royal Invitation Card 25", price: 899, category: "cards", sub: "Cards", img: "cards25.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 66, name: "Royal Invitation Card 26", price: 899, category: "cards", sub: "Cards", img: "cards26.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 67, name: "Royal Invitation Card 27", price: 899, category: "cards", sub: "Cards", img: "cards27.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 68, name: "Royal Invitation Card 28", price: 899, category: "cards", sub: "Cards", img: "cards28.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 69, name: "Royal Invitation Card 29", price: 899, category: "cards", sub: "Cards", img: "cards29.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 70, name: "Royal Invitation Card 30", price: 899, category: "cards", sub: "Cards", img: "cards30.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 71, name: "Royal Invitation Card 31", price: 899, category: "cards", sub: "Cards", img: "cards31.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 72, name: "Royal Invitation Card 32", price: 899, category: "cards", sub: "Cards", img: "cards32.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 73, name: "Royal Invitation Card 33", price: 899, category: "cards", sub: "Cards", img: "cards33.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 74, name: "Royal Invitation Card 34", price: 899, category: "cards", sub: "Cards", img: "cards34.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 75, name: "Royal Invitation Card 35", price: 899, category: "cards", sub: "Cards", img: "cards35.jpg", about: "A premium and highly detailed royal theme wedding invitation card designed with pastel tones and premium texture sheets." },
+    { id: 76, name: "Greeting Card 10", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card10.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 77, name: "Handcrafted Card 11", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card11.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 78, name: "Greeting Card 12", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card12.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 79, name: "B'day Hamper", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card13.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 80, name: "Cute Hamper", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card14.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 81, name: "Beautifully Detailed Hamper", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card15.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 82, name: "Pink Glam Hamper", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card16.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 83, name: "Oxidised Beautifully Hamper", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card17.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 84, name: "Purple Cute Hamper", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card18.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 85, name: "Black Velvet Coco Box", price: 399, category: "handcrafted", sub: "Handcrafted", img: "greeting card19.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 86, name: "Memories Box", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card20.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 87, name: "Frame with Memories Hamper", price: 199, category: "handcrafted", sub: "Handcrafted", img: "greeting card21.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 88, name: "Pretty Pink Bouquet", price: 799, category: "bouquets", sub: "Bouquet", img: "bouquet11.jpg", about: "A beautiful bouquet of pink flowers, perfect for expressing love and affection." },
+    { id: 89, name: "Glam Goddess Bouquet", price: 899, category: "bouquets", sub: "Bouquet", img: "bouquet12.jpg", about: "A stunning bouquet that embodies elegance and glamour, perfect for making a lasting impression." },
+    { id: 90, name: "Midnight Glam Bouquet", price: 799, category: "bouquets", sub: "Bouquet", img: "bouquet13.jpg", about: "A magnificent hamper bouquet featuring luxury accessories, premium wrapping, and treats, perfect for high-end surprises." },
+    { id: 91, name: "Chocolate Bouquet", price: 599, category: "bouquets", sub: "Bouquet", img: "bouquet14.jpg", about: "A delicious bouquet of chocolates, perfect for satisfying sweet cravings." },
+    { id: 92, name: "Bouquet 15", price: 499, category: "bouquets", sub: "Bouquet", img: "bouquet15.jpg", about: "A magnificent hamper bouquet featuring luxury accessories, premium wrapping, and treats, perfect for high-end surprises." },
+    { id: 93, name: "Bouquet 16", price: 499, category: "bouquets", sub: "Bouquet", img: "bouquet16.jpg", about: "A magnificent hamper bouquet featuring luxury accessories, premium wrapping, and treats, perfect for high-end surprises." },
+    { id: 94, name: "Bouquet 17", price: 499, category: "bouquets", sub: "Bouquet", img: "bouquet17.jpg", about: "A magnificent hamper bouquet featuring luxury accessories, premium wrapping, and treats, perfect for high-end surprises." },
+    { id: 95, name: "Bouquet 18", price: 499, category: "bouquets", sub: "Bouquet", img: "bouquet18.jpg", about: "A magnificent hamper bouquet featuring luxury accessories, premium wrapping, and treats, perfect for high-end surprises." },
+    { id: 96, name: "Bouquet 19", price: 499, category: "bouquets", sub: "Bouquet", img: "bouquet19.jpg", about: "A magnificent hamper bouquet featuring luxury accessories, premium wrapping, and treats, perfect for high-end surprises." },
+    { id: 97, name: "Bouquet 20", price: 499, category: "bouquets", sub: "Bouquet", img: "bouquet20.jpg", about: "A magnificent hamper bouquet featuring luxury accessories, premium wrapping, and treats, perfect for high-end surprises." },
+    { id: 98, name: "Bouquet 21", price: 499, category: "bouquets", sub: "Bouquet", img: "bouquet21.jpg", about: "A magnificent hamper bouquet featuring luxury accessories, premium wrapping, and treats, perfect for high-end surprises." },
+    { id: 99, name: "Bouquet 22", price: 499, category: "bouquets", sub: "Bouquet", img: "bouquet22.jpg", about: "A magnificent hamper bouquet featuring luxury accessories, premium wrapping, and treats, perfect for high-end surprises." },
+    { id: 100, name: "Bouquet 23", price: 499, category: "bouquets", sub: "Bouquet", img: "bouquet23.jpg", about: "A magnificent hamper bouquet featuring luxury accessories, premium wrapping, and treats, perfect for high-end surprises." },
+    { id: 101, name: "Bouquet 24", price: 499, category: "bouquets", sub: "Bouquet", img: "bouquet24.jpg", about: "A magnificent hamper bouquet featuring luxury accessories, premium wrapping, and treats, perfect for high-end surprises." },
+    { id: 102, name: "Bouquet 25", price: 499, category: "bouquets", sub: "Bouquet", img: "bouquet25.jpg", about: "A magnificent hamper bouquet featuring luxury accessories, premium wrapping, and treats, perfect for high-end surprises." },
+    { id: 103, name: "Polaroid 1", price: 499, category: "handcrafted", sub: "Handcrafted", img: "polorid.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 104, name: "Polaroid 6", price: 499, category: "handcrafted", sub: "Handcrafted", img: "polorid 6.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 105, name: "Polaroid Light Kit", price: 499, category: "handcrafted", sub: "Handcrafted", img: "polaroid light kit.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 106, name: "Polaroid 6p", price: 499, category: "handcrafted", sub: "Handcrafted", img: "polorid 6p.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." },
+    { id: 107, name: "Polaroid Album", price: 499, category: "handcrafted", sub: "Handcrafted", img: "polorid aulbum.jpg", about: "A beautifully detailed handcrafted card that can be fully personalized with your own custom quotes and photo designs." }
+];
+  
+
+
+
+        let cart = [];
+    
+
+        // Dynamic Product Render
+        function renderProducts(items) {
+            const grid = document.getElementById('product-grid');
+            if (items.length === 0) {
+                grid.innerHTML = '<p class="text-center text-charcoal/50 col-span-4 py-8">No products found in this category.</p>';
+                return;
+            }
+            grid.innerHTML = items.map(product => `
+                <div class="group relative flex flex-col justify-between bg-cream border border-beige p-4 transition duration-300 hover:shadow-sm">
+                    <div class="aspect-square w-full overflow-hidden bg-beige mb-4 relative">
+                        <img src="${product.img}" alt="${product.name}" class="h-full w-full object-cover object-center group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-2 left-2 bg-cream/90 px-2 py-0.5 text-[10px] tracking-widest uppercase font-medium text-charcoal">${product.sub}</span>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-base text-charcoal">${product.name}</h3>
+                        <p class="text-sm text-charcoal/70 mt-1">₹${product.price.toFixed(2)}</p>
+                    </div>
+                    <div class="mt-4 flex gap-2">
+                        <button onclick="viewProduct(${product.id})" class="w-1/2 border border-dustyRose py-2 text-xs tracking-widest uppercase text-charcoal hover:bg-dustyRose hover:text-white transition">
+                            View Details
+                        </button>
+                        <button onclick="addToCart(${product.id})" class="w-1/2 border border-charcoal/30 py-2 text-xs tracking-widest uppercase hover:bg-charcoal hover:text-cream transition">
+                            Add To Bag
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Filtering System
+        function filterCategory(cat, event) {
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.classList.remove('bg-charcoal', 'text-cream');
+                btn.classList.add('border-beige');
+            });
+            event.target.classList.add('bg-charcoal', 'text-cream');
+
+            if (cat === 'all') {
+                renderProducts(products);
+            } else {
+                const filtered = products.filter(p => p.category.trim() === cat.trim());
+                renderProducts(filtered);
+            }
+        }
+
+        // Cart Actions
+        function toggleCart() {
+            const sidebar = document.getElementById('cart-sidebar');
+            sidebar.classList.toggle('translate-x-full');
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function addToCart(id) {
+            const product = products.find(p => p.id === id);
+            const exists = cart.find(item => item.id === id);
+
+            if (exists) {
+                exists.quantity += 1;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+            updateCart();
+            document.getElementById('cart-sidebar').classList.remove('translate-x-full');
+        }
+
+        function updateCart() {
+            const count = cart.reduce((acc, item) => acc + item.quantity, 0);
+            document.getElementById('cart-count').innerText = count;
+
+            const itemsContainer = document.getElementById('cart-items');
+            if (cart.length === 0) {
+                itemsContainer.innerHTML = '<p class="text-sm text-charcoal/50 text-center py-8">Your cart is empty.</p>';
+            } else {
+                itemsContainer.innerHTML = cart.map(item => `
+                    <div class="flex items-center justify-between border-b border-beige pb-3">
+                        <div class="flex items-center space-x-3">
+                            <img src="${item.img}" class="w-12 h-12 object-cover" />
+                            <div>
+                                <h4 class="font-serif text-xs text-charcoal font-semibold">${item.name}</h4>
+                                <p class="text-xs text-charcoal/60">₹${item.price.toFixed(2)} x ${item.quantity}</p>
+                            </div>
+                        </div>
+                        <button onclick="removeFromCart(${item.id})" class="text-xs text-red-400 hover:underline">Remove</button>
+                    </div>
+                `).join('');
+            }
+
+            const total = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+            document.getElementById('cart-total').innerText = `₹${total.toFixed(2)}`;
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCart();
+        }
+
+        // Checkout & Send Email via EmailJS
+        function checkoutOrder() {
+            if(cart.length === 0) {
+                alert("Your cart is empty.");
+                return;
+            }
+            
+            const mode = document.getElementById('payment-method').value;
+            const totalAmount = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+            
+            let itemsList = cart.map(item => `- ${item.name} (Qty: ${item.quantity}) - ₹${(item.price * item.quantity).toFixed(2)}`).join("\n");
+            
+            var emailParams = {
+                from_name: "Web Store Customer", 
+                message: `New Order Received!\n\n🛒 Order Details:\n${itemsList}\n\n💰 Total Amount: ₹${totalAmount.toFixed(2)}\n💳 Payment Mode: ${mode}`
+            };
+
+            emailjs.send("gmail", "template_6o3sgj9", emailParams)
+            .then(function(res) {
+                alert(`✨ Order Received!\nPayment Mode selected: ${mode}\nThank you for choosing Mansi Creation!`);
+                cart = [];
+                updateCart(); 
+                toggleCart();
+            }, function(error) {
+                emailjs.send("default_service", "template_6o3sgj9", emailParams)
+                .then(function() {
+                    alert(`✨ Order Received!\nPayment Mode selected: ${mode}\nThank you for choosing Mansi Creation!`);
+                    cart = [];
+                    updateCart(); 
+                    toggleCart();
+                }, function(err) {
+                    alert("Order failed: " + JSON.stringify(err));
+                });
+            });
+        }
+
+        // Modal View Functions
+        function viewProduct(id) {
+            const product = products.find(p => p.id === id);
+            if (!product) return;
+
+            document.getElementById("modal-img").src = product.img;
+            document.getElementById("modal-name").innerText = product.name;
+            document.getElementById("modal-price").innerText = "₹" + product.price.toFixed(2);
+            document.getElementById("modal-about").innerText = product.about || "Beautiful handcrafted gift made with premium quality materials.";
+            
+            document.getElementById("modal-cart-btn").onclick = () => {
+                addToCart(product.id);
+                closeProduct();
+            };
+
+            document.getElementById("modal-buy-btn").onclick = () => {
+                addToCart(product.id);
+                closeProduct();
+                toggleCart();
+            };
+
+            const whatsappNumber = "917028755897";
+            const messageText = `Hello Mansi Creation, I want to order:\n\n📌 *Product:* ${product.name}\n💰 *Price:* ₹${product.price.toFixed(2)}\n\nPlease share details for further process.`;
+            document.getElementById("modal-whatsapp-btn").href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(messageText)}`;
+
+            const modal = document.getElementById("product-modal");
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+        }
+
+        function closeProduct() {
+            const modal = document.getElementById("product-modal");
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById("product-modal");
+            if(event.target === modal){
+                closeProduct();
+            }
+        }
+
+        window.onload = () => {
+            renderProducts(products);
+        };
+    </script>
+</body>
+</html>
